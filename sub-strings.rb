@@ -2,7 +2,6 @@ def subString(string, dictionary)
     wordArray = Hash.new(0)
     cleanString = string.downcase.gsub(/[^a-z0-9\s]/i, '').split(" ")
 
-
     for word in dictionary do
         for subStr in cleanString
             if subStr.scan(/#{word}/).count > 0
